@@ -1,4 +1,3 @@
-Here's the full file for your Job Portal project with a sample `README.md`:
 
 ```markdown
 # Job Portal with API
