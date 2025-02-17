@@ -115,14 +115,6 @@ The application exposes a set of API endpoints for authentication and job manage
 - **PUT /api/jobs/{id}**: Update a job post (admin only).
 - **DELETE /api/jobs/{id}**: Delete a job post (admin only).
 
-## Contributing
-
-Feel free to fork this repository, create a new branch, and submit a pull request with improvements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License.
-
 ## Acknowledgements
 
 - Laravel for the powerful PHP framework.
