@@ -17,7 +17,15 @@ class SeekerFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'skills' => $this->faker->randomElement([
+                'PHP, Laravel, MySQL',
+                'JavaScript, React, Node.js',
+                'Python, Django, AI/ML',
+                'DevOps, Docker, Kubernetes'
+            ]),
+            'personalImage' => 'default.png',
+            'experience' => $this->faker->paragraph(3),
         ];
     }
 }

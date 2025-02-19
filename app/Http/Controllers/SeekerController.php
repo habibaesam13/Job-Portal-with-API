@@ -31,12 +31,12 @@ class SeekerController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(seeker $seeker)
+    //view seeker profile
+    public function show($id)
     {
-        //
+        $seekerData=seeker::findOrFail($id);
+        return response()->json($seekerData);
+
     }
 
     /**
