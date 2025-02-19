@@ -26,7 +26,6 @@ class jobFactory extends Factory
         'status' => fake()->randomElement(['open', 'closed']),
     ];
 }
- 
- 
+
 
 }

@@ -12,8 +12,6 @@ class JobController extends Controller
     {
         $jobs = Job::all();
         $jobs->load(['employer', 'category']);
-        
-
         return response()->json($jobs);
     }
 
