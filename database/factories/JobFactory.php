@@ -21,8 +21,8 @@ class jobFactory extends Factory
         'title' => fake()->jobTitle(),
         'description' => fake()->paragraph(4),
         'salary' => fake()->randomFloat(2, 40000, 150000),
-        'employerId' => \App\Models\Employer::factory(), 
-        'categoryId' => \App\Models\Category::factory(), 
+        'employer_id' => \App\Models\Employer::factory(), 
+        'category_id' => \App\Models\Category::factory(), 
         'status' => fake()->randomElement(['open', 'closed']),
     ];
 }

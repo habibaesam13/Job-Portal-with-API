@@ -12,8 +12,8 @@ class Job extends Model
         "title",
         "description",
         "salary",
-        "employerId",
-        "categoryId",
+        "employer_id",
+        "category_id",
         "status"
     ];
     // Define the relationship: One job belongs to one category

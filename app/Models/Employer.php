@@ -18,6 +18,6 @@ class Employer extends Model
      // Define the relationship: One employer has many jobs
      public function jobs()
      {
-         return $this->hasMany(Job::class);
+         return $this->hasMany(Job::class, 'employer_id'); // Fix FK relation
      }
 }

@@ -34,9 +34,10 @@ class EmployerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Employer $employer)
+    public function show($id)
     {
-        //
+        $employerData=Employer::findOrFail($id);
+        return response()->json($employerData);
     }
 
     /**
@@ -61,5 +62,34 @@ class EmployerController extends Controller
     public function destroy(Employer $employer)
     {
         //
+    }
+
+
+    public function createJob(Request $request, $employerId)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'salary' => 'required|string',
+            'categoryId' => 'required|exists:categories,id',
+            'status' => 'required|in:open,closed',
+        ]);
+
+        $employer = Employer::findOrFail($employerId);
+
+        $job = $employer->jobs()->create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'employer_id'=>$employerId,
+            'category_id' => $request->categoryId,
+            'salary' => $request->salary,
+            'status' => $request->status,
+        ]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Job created successfully',
+            'data' => $job
+        ], 201);
     }
 }

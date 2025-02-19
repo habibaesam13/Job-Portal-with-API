@@ -15,7 +15,9 @@ Route::get('/jobs',[JobController::class,'index']);
 
 //employer routes
 Route::get('/employers',[EmployerController::class,'index']);
-
+Route::get('/EmpProfile/{id}',[EmployerController::class,'show']);
+    //create job
+    Route::post('/employer/{employerId}/jobs', [EmployerController::class, 'createJob']);
 //seeker routes
-Route::get('/profile/{id}',[SeekerController::class,'show']);
+Route::get('/SeekerProfile/{id}',[SeekerController::class,'show']);
 Route::post('/seeker/{id}', [SeekerController::class, 'update']);
