@@ -18,3 +18,4 @@ Route::get('/employers',[EmployerController::class,'index']);
 
 //seeker routes
 Route::get('/profile/{id}',[SeekerController::class,'show']);
+Route::post('/seeker/{id}', [SeekerController::class, 'update']);
