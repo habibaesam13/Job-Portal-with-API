@@ -11,7 +11,6 @@ This is a Job Portal web application built with **Laravel**. The application all
 - **Job Search**: Users can search for available jobs.
 - **User Profiles**: Users can view and edit their profiles.
 - **API Integration**: Secure authentication using **Laravel Sanctum** for API endpoints.
-- **Responsive UI**: Built with **Bootstrap**, **CSS**, and **JavaScript** for a clean and responsive user interface.
 
 ## Prerequisites
 
